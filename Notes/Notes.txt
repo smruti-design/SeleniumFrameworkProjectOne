@@ -1,0 +1,15 @@
+
+1. CTRL + SHIFT + F -> Formatting the lines.
+	CTRL + SHIFT + O -> Takes care of import statement to some extent
+
+2. Initially for the path of the webdriver which needed to be 
+	a) constant variable = final
+	b) that class need not to be inherited = final class [ as LoginPage only needs to extend Base Class only ]
+	c) Others class won't create object of that class = private constructor
+	only have a getter method to fetch the value as the variable is final.
+	
+3. Convert the project to testNG -> so that it will involve all the class under testng.xml which have testNg 
+	annotations attached to them so that we can run	the complete suite at once.
+	
+4. 
+

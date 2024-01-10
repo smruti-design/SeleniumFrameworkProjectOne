@@ -25,5 +25,7 @@
 	[ Local variables stored in heap and their references are stored in heap and got removed once the method ends ]
 	c. But the static variable is a class variable stored in heap and ends when class closes.
 	
-8. ThreadLocal
+8. ThreadLocal:
+	Helps to create variables that can be read and written by same thread.
+	Easiest way to safeguard static variable during parallel execution. 
 

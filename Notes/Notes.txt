@@ -11,5 +11,19 @@
 3. Convert the project to testNG -> so that it will involve all the class under testng.xml which have testNg 
 	annotations attached to them so that we can run	the complete suite at once.
 	
-4. 
+4. BaseClass constructor is protected not private as we want no one should create an object from the class
+	and it should be visible to the child class those who extends it.
+	
+5. Static methods can use static variables only.
+
+6. Objects.isNull(driver) is same as if(driver == null) -> we r using this because any new joiner won't run that 
+	method 2 times. But it will fail if we run the tests in parallel.
+	
+7. Understanding Thread Safety Issue:
+	a. Scripts working fine whilst running sequentially but fails whilst running in parallel.
+	b. All local variables are thread-safe. 
+	[ Local variables stored in heap and their references are stored in heap and got removed once the method ends ]
+	c. But the static variable is a class variable stored in heap and ends when class closes.
+	
+8. ThreadLocal
 

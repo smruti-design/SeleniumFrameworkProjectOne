@@ -6,38 +6,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.sdw.constants.FrameworkConstants;
+import com.sdw.utils.ReadPropertyFile;
 
-public class Driver {
+public final class Driver {
 
-	private static WebDriver driver;
-	
-	private static ThreadLocal<WebDriver> dr = new ThreadLocal<>();
-	
-	public static WebDriver getDriver() {
-		return dr.get();
+	private Driver() {
+		
 	}
 	
-	public static void setDriver(WebDriver driveref) {
-		dr.set(driveref);
-	}
-
-	public static void unload() {
-		dr.remove();
-	}
-	
-	public static void initDriver() {
-		if (Objects.isNull(driver)) {
+	public static void initDriver() throws Exception {
+		if (Objects.isNull(DriverManager.getDriver())) {
 			System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromeDriverPath());
-			driver = new ChromeDriver();
-			setDriver(driver);
-			getDriver().get("https://www.google.com");
+			WebDriver driver= new ChromeDriver();
+			DriverManager.setDriver(driver);
+			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
 		}
 	}
 
 	public static void quitDriver() {
-		if(Objects.nonNull(driver)) {
-			getDriver().quit();
-			unload();
+		if(Objects.nonNull(DriverManager.getDriver())) {
+			DriverManager.getDriver().quit();
+			DriverManager.unload();
 		}
 	}
 }

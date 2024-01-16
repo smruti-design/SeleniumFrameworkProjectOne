@@ -15,7 +15,7 @@ public class BaseClass {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws Exception {
 		Driver.initDriver();
 	}
 

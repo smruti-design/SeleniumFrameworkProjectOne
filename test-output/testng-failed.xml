@@ -6,8 +6,17 @@
       <class name="com.sdw.tests.Home">
         <methods>
           <include name="test1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.sdw.tests.Home -->
+      <class name="com.sdw.tests.LoginClass">
+        <methods>
+          <include name="test1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sdw.tests.LoginClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

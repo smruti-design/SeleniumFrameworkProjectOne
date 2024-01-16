@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import com.sdw.driver.Driver;
+import com.sdw.driver.DriverManager;
 
 public class Home extends BaseClass {
 
@@ -14,6 +15,11 @@ public class Home extends BaseClass {
 
 	@Test
 	public void test1() {
-		Driver.getDriver().findElement(By.name("q")).sendKeys("google", Keys.ENTER);
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("google", Keys.ENTER);
+	}
+	
+	@Test
+	public void test2() {
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("faang", Keys.ENTER);
 	}
 }

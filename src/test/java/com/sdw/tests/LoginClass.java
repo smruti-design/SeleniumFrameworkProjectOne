@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import com.sdw.driver.Driver;
+import com.sdw.driver.DriverManager;
 
 public final class LoginClass extends BaseClass{
 	
@@ -14,6 +15,6 @@ public final class LoginClass extends BaseClass{
 	
 	@Test
 	public void test1() {
-		Driver.getDriver().findElement(By.name("q")).sendKeys("cognizant",Keys.ENTER);
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("cognizant",Keys.ENTER);
 	}
 }

@@ -28,4 +28,11 @@
 8. ThreadLocal:
 	Helps to create variables that can be read and written by same thread.
 	Easiest way to safeguard static variable during parallel execution. 
+	
+9. 	Reading property from properties file is like a hashTable - > slow but thread safe.
+	if we have 100 of property and u r using 100 times its fine.
+	But if we are using 500 times like continuous fetching from properties.file then convert it to hashMap.
+	
+	
+	
 

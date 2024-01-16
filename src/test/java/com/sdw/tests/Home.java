@@ -1,5 +1,6 @@
 package com.sdw.tests;
 
+import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
@@ -21,5 +22,19 @@ public class Home extends BaseClass {
 	@Test
 	public void test2() {
 		DriverManager.getDriver().findElement(By.name("q")).sendKeys("faang", Keys.ENTER);
+	}
+	
+	@Test
+	public void test3() {
+		String temp = "Hello World";
+		
+		Assertions.assertThat(temp)
+					.isNotNull()
+					.as("String is actually empty").isNotEmpty()
+					.isNotBlank()
+					.containsWhitespaces()
+					.containsIgnoringCase("world")
+					.matches("\\w.*" + " World")
+					.doesNotContainPattern("\\d.*");
 	}
 }

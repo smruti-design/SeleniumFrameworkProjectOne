@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
 
+import com.sdw.constants.FrameworkConstants;
+
 public final class ReadPropertyFile {
 
 	private ReadPropertyFile() {
@@ -16,7 +18,9 @@ public final class ReadPropertyFile {
 	static {
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/config/config.properties");
+			System.out.println(FrameworkConstants.getConfigfilepath());
+			fis = new FileInputStream(FrameworkConstants.getConfigfilepath());
+			
 			prop.load(fis);
 		} catch (Exception e) {
 			e.printStackTrace();

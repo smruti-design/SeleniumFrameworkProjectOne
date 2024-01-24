@@ -33,6 +33,88 @@
 	if we have 100 of property and u r using 100 times its fine.
 	But if we are using 500 times like continuous fetching from properties.file then convert it to hashMap.
 	
+10. Page Factory Method :
+	Advantages :-
+	1. Reduce verbosity
+	2. Faster than find element
+	3. Lazy Evaluation
+	
+	Disadvantages :-		
+	1. StaleElementException - due to Ajax call
+	2. Can't use to produce dynamic elements.
+	Eg - private String menuitem = "//div[text()='%value%']/parent::a";
+		public void clickMenu(String text){
+			driver.findElement(By.xpath(menuitem.replace("%value%",text)));
+		}
+		The above isn't possible with Page Factory method.
+		
+		Over there you have to create a lot of elements for each Menu item.
+		
+	3. It's only very millisec faster than driver.findElement like if we run for 3 hrs the difference will be 5 mins.
+	
+	
+11. AJAX (Asynchronous JavaScript and XML) Calls :
+	Let's say you're using a social media website, and you want to post a comment on a friend's photo.
+	 Without AJAX, submitting the comment might involve reloading the entire page, 
+	 causing a delay and interrupting your browsing experience.
+
+	Imagine you're using a web application, and you click a button to submit a form or load additional information. 
+	Traditionally, without AJAX, the entire web page would reload or redirect to a new page each time you perform
+	 an action like this. This process can be slow and not very user-friendly.
+
+	Now, enter AJAX. AJAX allows web pages to send and receive data asynchronously in the background,
+	 without needing to reload the entire page. This means you can update parts of a page without requiring 
+	 a full refresh.
+	
+	This makes the interaction smoother and faster for the user because only the necessary data is sent and received,
+	 and there's no need to refresh the whole page.
+	 
+
+12. Page class should be free from assertions.
+	All your page methods should return something.
+	
+13.	Instead of thread.sleep we can use uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS)
+	Due avoid ajax calls as it may not be handled by explicit.
+	Sometimes a simple thread.sleep makes life easy. That's the above.
+	
+14.	In java 8 -> wait.until(d-> d.findElement(webElement).isEnabled());
+
+15. Subclass IS A Superclass. (IS A Relationship is mandatory)
+16. When the sub class needs most or all of the methods in super class
+	Rule : Don't use inheritance for code reusability alone.
+
+17. The change business owner need to do put that in -> config.properties
+	the change developer/ coders need to do -> Framework.CONSTANTS
+	Use only one type of waits either explicit or implicit throughout the project.
+	
+18. Enum is used to define collections of constants.
+	It can contain methods & constants.
+	We can use EnumSet & EnumMap.
+	Enum can't extend other classes.
+	
+	Eg - public enum Severity{
+		CRITICAL, BLOCKER, MAJOR , MINOR ;
+	}
+	It's same as defining something as ,
+	public static final ClassName CRITICAL = new ClassName();
+	
+19. DataProvider :
+	
+	Eg: @DataProvider
+	public Object[][] getData(){
+		return new Object[][] {
+			{"smruti"},
+			{1}
+		};
+	}
+	
+	2D array is not the return type of data provider everytime.
+	What does Object[][] signifies ?
+	If u r not clear about the data types of inputs u can give Object(superclass)
+	1st Dimension -> How many iterations u want to run the test
+	2nd Dimension -> How many parameters u want to feed to your test method. 
+	
+	
 	
 	
 

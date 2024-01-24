@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-16T17:52:21Z" name="Default suite" finished-at="2024-01-16T17:52:51Z" duration-ms="30004">
+  <suite started-at="2024-01-24T06:01:36Z" name="Suite" finished-at="2024-01-24T06:02:13Z" duration-ms="37100">
     <groups>
     </groups>
-    <test started-at="2024-01-16T17:52:21Z" name="Default test" finished-at="2024-01-16T17:52:51Z" duration-ms="30004">
+    <test started-at="2024-01-24T06:01:36Z" name="Test" finished-at="2024-01-24T06:02:13Z" duration-ms="37100">
       <class name="com.sdw.tests.OrangeHRMTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sdw.tests.OrangeHRMTest@327af41b]" started-at="2024-01-16T17:52:21Z" name="setUp" finished-at="2024-01-16T17:52:35Z" duration-ms="13380" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sdw.tests.OrangeHRMTest@327af41b]" started-at="2024-01-24T06:01:36Z" name="setUp" finished-at="2024-01-24T06:01:56Z" duration-ms="20069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:com.sdw.tests.OrangeHRMTest@327af41b]" started-at="2024-01-16T17:52:35Z" name="loginTest" finished-at="2024-01-16T17:52:50Z" duration-ms="15590" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:com.sdw.tests.OrangeHRMTest@327af41b]" started-at="2024-01-24T06:01:56Z" name="loginTest" finished-at="2024-01-24T06:02:12Z" duration-ms="15707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sdw.tests.OrangeHRMTest@327af41b]" started-at="2024-01-16T17:52:50Z" name="tearDown" finished-at="2024-01-16T17:52:51Z" duration-ms="996" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sdw.tests.OrangeHRMTest@327af41b]" started-at="2024-01-24T06:02:12Z" name="tearDown" finished-at="2024-01-24T06:02:13Z" duration-ms="1220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.sdw.tests.OrangeHRMTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

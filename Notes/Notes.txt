@@ -112,7 +112,14 @@
 	What does Object[][] signifies ?
 	If u r not clear about the data types of inputs u can give Object(superclass)
 	1st Dimension -> How many iterations u want to run the test
-	2nd Dimension -> How many parameters u want to feed to your test method. 
+	2nd Dimension -> How many parameters u want to feed to your test method.
+	
+	@Test(dataProvider= name, dataProviderClass = Employee.class)
+	First it will try to find in the same class if not found then at the parent class otherwise it will 
+	search on the class provided.
+	If the called class is having argument constructor then pls mention static ahead of dataProvider.
+	
+	  
 	
 	
 	

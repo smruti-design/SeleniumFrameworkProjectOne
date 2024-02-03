@@ -18,5 +18,16 @@ public class DataProviderTest {
 		};
 	}
 	
+	@Test(dataProvider = "getData")
+	public void test2(String name) {
+		System.out.println(name);
+	}
+	
+	@DataProvider
+	public String[] getData2() {
+		String[] a = {"smruti", "sourav", "sahoo"};
+		return a;
+	}
+	
 
 }

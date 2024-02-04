@@ -120,6 +120,37 @@
 	If the called class is having argument constructor then pls mention static ahead of dataProvider.
 	
 	  
+20. Using Json file with data provider
+	dependencies - > jackson-databind and jackson-core used to convert json to map objects.
+	
+21. How to run all the dataProvider rows in parallel:
+	@DataProvider(parallel = true)
+	How to control the number of threads running at one time in parallel :
+	Inside testNG -
+	<suite name="Suite" data-provider-thread-count="3">
+	
+22. ITestListeners -> onTestSuccess , onTestFailure & a lot.
+	Listeners to be added in testNG.xml
+	<listeners>
+		<listener class-name="com.sdw.listeners.ListenerClass" />
+	</listeners>
+	
+	
+23. IMethodInterceptor :
+	So, if you have a bunch of tests, and you want them to run in a specific order, 
+	or if you need to prioritize some tests over others, the IMethodInterceptor helps you customize 
+	that order just like you would plan activities for a party.
+
+	In simpler words, it lets you take control and decide the sequence in which your tests should be executed, 
+	making your testing "party" more organized and efficient.
+	
+	It helps tester to disable few test in runtime , you can decide which one to run & which one not to.
+	It will execute only once for the entire suite.
+	
+	
+24. 
+	
+	
 	
 	
 	
